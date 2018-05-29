@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Logs
+logs
+*.log
+
+/node_modules/
+
+# docs generation
+generate-docs/ocaml
+generate-docs/output
+generate-docs/node_modules

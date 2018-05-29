@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/css/main.css"><div class="ocamldoc">
+<div class="navbar"><a class="pre" href="Hashtbl.SeededHashedType.html" title="Hashtbl.SeededHashedType">Previous</a>
+&#xA0;<a class="up" href="Hashtbl.html" title="Hashtbl">Up</a>
+&#xA0;</div>
+<h1>Module type <a href="type_Hashtbl.SeededS.html">Hashtbl.SeededS</a></h1>
+
+<pre><span class="keyword">module</span> type SeededS = sig .. end</pre><div class="info modtype top">
+The output signature of the functor <a href="Hashtbl.MakeSeeded.html"><code class="code">Hashtbl.MakeSeeded</code></a>.<br>
+<b>Since</b> 4.00.0<br>
+</div>
+<hr width="100%">
+
+<pre id="TYPEkey"><span class="keyword">type</span> key;
+</pre>
+
+
+<pre id="TYPEt"><span class="keyword">type</span> t(&apos;a);
+</pre>
+
+
+<pre id="VALcreate"><span class="keyword">let</span> create: (~random: bool=?, int) =&gt; t(&apos;a);
+</pre>
+<pre id="VALclear"><span class="keyword">let</span> clear: t(&apos;a) =&gt; unit;
+</pre>
+<pre id="VALreset"><span class="keyword">let</span> reset: t(&apos;a) =&gt; unit;
+</pre>
+<pre id="VALcopy"><span class="keyword">let</span> copy: t(&apos;a) =&gt; t(&apos;a);
+</pre>
+<pre id="VALadd"><span class="keyword">let</span> add: (t(&apos;a), key, &apos;a) =&gt; unit;
+</pre>
+<pre id="VALremove"><span class="keyword">let</span> remove: (t(&apos;a), key) =&gt; unit;
+</pre>
+<pre id="VALfind"><span class="keyword">let</span> find: (t(&apos;a), key) =&gt; &apos;a;
+</pre>
+<pre id="VALfind_all"><span class="keyword">let</span> find_all: (t(&apos;a), key) =&gt; list(&apos;a);
+</pre>
+<pre id="VALreplace"><span class="keyword">let</span> replace: (t(&apos;a), key, &apos;a) =&gt; unit;
+</pre>
+<pre id="VALmem"><span class="keyword">let</span> mem: (t(&apos;a), key) =&gt; bool;
+</pre>
+<pre id="VALiter"><span class="keyword">let</span> iter: ((key, &apos;a) =&gt; unit, t(&apos;a)) =&gt; unit;
+</pre>
+<pre id="VALfold"><span class="keyword">let</span> fold: ((key, &apos;a, &apos;b) =&gt; &apos;b, t(&apos;a), &apos;b) =&gt; &apos;b;
+</pre>
+<pre id="VALlength"><span class="keyword">let</span> length: t(&apos;a) =&gt; int;
+</pre>
+<pre id="VALstats"><span class="keyword">let</span> stats: t(&apos;a) =&gt; Hashtbl.statistics;
+</pre></div>

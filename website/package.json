@@ -1,0 +1,40 @@
+{
+  "name": "reason-site",
+  "scripts": {
+    "start": "docusaurus-start",
+    "build": "docusaurus-build",
+    "bundle-try-playground:prod": "rollup -c",
+    "bundle-try-playground:dev": "DEV=true rollup -c -w",
+    "write-translations": "docusaurus-write-translations",
+    "crowdin-upload": "export CROWDIN_DOCUSAURUS_PROJECT_ID=\"reason\"; export CROWDIN_DOCUSAURUS_API_KEY=$REASON_CROWDIN_API_KEY; crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
+    "crowdin-download": "export CROWDIN_DOCUSAURUS_PROJECT_ID=\"reason\"; export CROWDIN_DOCUSAURUS_API_KEY=$REASON_CROWDIN_API_KEY; crowdin --config ../crowdin.yaml download -b master",
+    "prepare": "npm link bs-platform"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reasonml/reasonml.github.io.git"
+  },
+  "dependencies": {
+    "ansi_up": "^2.0.3",
+    "codemirror": "^5.32.0",
+    "docusaurus": "1.0.3",
+    "lz-string": "^1.4.4",
+    "reason-react": "0.4.1",
+    "resaurus": "rickyvetter/resaurus",
+    "rollup": "^0.52.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-jsx": "^1.0.3",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.1.1",
+    "envify": "^4.1.0",
+    "reason": "^3.1.0",
+    "uglifyify": "^4.0.5"
+  }
+}
