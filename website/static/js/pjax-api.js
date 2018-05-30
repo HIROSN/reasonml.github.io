@@ -5269,7 +5269,7 @@ require = function e(t, n, r) {
             n.xhr = function(e, t, n, o, i) {
                 var s = new XMLHttpRequest;
                 return new Promise(function(f) {
-                    return s.open(e, t, !0), s.responseType = /chrome|firefox/i.test(window.navigator.userAgent) && !/edge/i.test(window.navigator.userAgent) ? "document" : "text", s.timeout = o, s.setRequestHeader("X-Pjax", "1"), s.send(n), s.addEventListener("abort", function() {
+                    return s.open(e, t, !0), s.responseType = "document", s.timeout = o, s.setRequestHeader("X-Pjax", "1"), s.send(n), s.addEventListener("abort", function() {
                         return void f(u.Left(new a.DomainError("Failed to request by abort.")))
                     }), s.addEventListener("error", function() {
                         return void f(u.Left(new a.DomainError("Failed to request by error.")))
